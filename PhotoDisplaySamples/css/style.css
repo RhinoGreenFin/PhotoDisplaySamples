@@ -1,0 +1,103 @@
+﻿        #galleryContainer {
+            border: 2px solid #808080;
+            background-color:lightgray;
+            /*prefixes*/
+            -moz-box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box; 
+            border-radius:8px; 
+            min-width:400px;        
+        }
+
+        #galleryContainer h2 {     
+            text-align:center;
+            margin-top:10px;
+            width:auto;    
+            font: 70px/1.1em 'opensans-bold', sans-serif;
+            color: rgba(0, 0, 0, .8);
+            letter-spacing: -2px;
+            margin: 0 auto 18px auto;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, .8);                    
+        }
+
+        #photogallery {
+            width:100%;  
+            margin:0 auto; 
+        }
+
+            #photogallery div {
+                position: relative;
+                float: left;
+                height: 150px;
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                width: 17%; /*Took 85/5 = 17  This is the starting size for each image.*/
+                margin: 2% 0 0 2%;
+                border-radius: 5px;
+                -moz-transition: all 0.6s ease;
+                -o-transition: all 0.6s ease;
+                -webkit-transition: all 0.6s ease;
+                transition: all 0.6s ease; 
+                opacity: 0.5;
+            }
+
+        #galleryContainer div:hover {
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+            opacity: 1;
+            box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+          
+/*********************media queries */               
+        @media only screen and (max-width: 900px) {
+            #galleryContainer h2 {              
+              font: 50px/1.1em 'opensans-bold', sans-serif;
+            }
+            #photogallery div { 
+               width: 20%;                        
+           }
+        }
+
+       @media only screen and (max-width: 655px) {
+            #galleryContainer h2 {              
+              font: 50px/1.1em 'opensans-bold', sans-serif;
+            }
+            #photogallery div { 
+               width: 30%;  
+               height:150px;              
+           }
+        } 
+              
+        @media only screen and (max-width: 460px) {
+            #galleryContainer h2 {
+              text-align:center;
+              width:auto;    
+               font: 30px/1.1em 'opensans-bold', sans-serif; 
+            }
+            #photogallery div { 
+               width: auto;                
+               height:300px;
+               float:none;
+           }
+        }
+
+/*****************Image Slide Show*******/
+        #imageshow {
+            position: absolute;
+            width: 680px;
+            height: 400px;
+            bottom: 0;
+        }
+        .activeImage {
+            z-index: 90;
+        }
+        .slideImage {
+            position: inherit;
+            height: 100%;
+            width: 100%;
+        }

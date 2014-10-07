@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Facebook Login JavaScript Example</title>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=900, initial-scale=1">
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <!--Bugs: The images will be distorted if they are not the exact size. It would be better to scale the images first. -->
+</head>
+<body>  
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
+
+    <div id="status">
+    </div>
+
+    <h2>Image Slide Show</h2>
+    <div id="imageshow">
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/photosamples.js"></script>
+
+</body>
+</html>
